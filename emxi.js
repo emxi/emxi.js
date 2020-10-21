@@ -77,11 +77,11 @@
  * (The basics to EMXI to make the code easier to work with)
  */
 
- // checkTime for core.getTime();
- function checkTime(i) {
+// checkTime for core.getTime();
+function checkTime(i) {
     if (i < 10) {i = "0" + i}; // Add 0's to time numbers < 10
     return i;
- }
+}
 
 /**
  * #==============#
@@ -107,7 +107,11 @@ const core = {
         var seconds = date.getSeconds();
         minutes = checkTime(minutes);
         seconds = checkTime(seconds);
-        document.getElementById(tag).innerHTML = hours + ":" + minutes + ":" + seconds;
-        setTimeout(core.getTime, 500);
+        if (!tag.startsWith("#")){
+            document.getElementById(tag).innerHTML = hours + ":" + minutes + ":" + seconds;
+        } else {
+            console.error("ERROR! ID MUST NOT start with #!");
+        }
+        setTimeout(core.getTime, 500, tag);
     }
 }
