@@ -9,6 +9,8 @@
         <p>Testing date: <span id="date"></span></p> 
         <p>Testing time: <span id="time"></span></p>
 
+        <div id="footer"></div>
+
         <!-- Import EMXI -->
         <script src="emxi.js"></script>
 
@@ -16,6 +18,8 @@
         <script>
             core.getDate("date");
             core.getTime("time");
+            core.setFooter("footer", "Fivnex", "Other trademark(s) listed here in one string");
+            page.removeOverflow("x")
         </script>
     </body>
 </html>
