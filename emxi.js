@@ -122,7 +122,9 @@ const core = {
 }
 
 const media = {
-    // Coming Soon
+    addYouTubeVideo: function (videoURL, tag){
+        document.getElementById(tag).innerHTML = "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/" + videoURL + "\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+    }
 }
 
 const page = {

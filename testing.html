@@ -9,8 +9,10 @@
         <p>Testing date: <span id="date"></span></p> 
         <p>Testing time: <span id="time"></span></p>
 
-        <div id="footer"></div>
+        <div id="video"></div>
 
+        <div id="footer"></div>
+        
         <!-- Import EMXI -->
         <script src="emxi.js"></script>
 
@@ -19,7 +21,10 @@
             core.getDate("date");
             core.getTime("time");
             core.setFooter("footer", "Fivnex", "Other trademark(s) listed here in one string");
-            page.removeOverflow("x")
+            media.addYouTubeVideo("J3TqmXKLxuw", "video"); // Added the SOG video I was watching, nothing special
+            /**
+             * Do note that some material will not work, I tested it first with a rick-roll but it did not work.
+            */
         </script>
     </body>
 </html>
