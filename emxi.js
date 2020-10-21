@@ -77,10 +77,11 @@
  * (The basics to EMXI to make the code easier to work with)
  */
 
-// Display ONE item
-function display(tag, item){
-    
-}
+ // checkTime for core.getTime();
+ function checkTime(i) {
+    if (i < 10) {i = "0" + i}; // Add 0's to time numbers < 10
+    return i;
+ }
 
 /**
  * #==============#
@@ -92,10 +93,21 @@ function display(tag, item){
 
 const core = {
     getDate: function(tag){
-        if (typeof tag === "string"){
-            display(tag, new Date())
+        var date = new Date()
+        if (!tag.startsWith("#")){
+            document.getElementById(tag).innerHTML = date;
         } else {
-            display(tag, "ERROR: Tag MUST be sent as string")
+            console.error("ERROR! ID MUST NOT start with #!");
         }
+    },
+    getTime: function(tag){
+        var date = new Date();
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+        minutes = checkTime(minutes);
+        seconds = checkTime(seconds);
+        document.getElementById(tag).innerHTML = hours + ":" + minutes + ":" + seconds;
+        setTimeout(core.getTime, 500);
     }
 }
