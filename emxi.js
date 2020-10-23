@@ -113,11 +113,6 @@ const core = {
             console.error("ERROR! ID MUST NOT start with #!");
         }
         setTimeout(core.getTime, 500, tag);
-    },
-    setFooter: function(tag, name, otherTM = ""){
-        var date = new Date();
-        var year = date.getFullYear();
-        document.getElementById(tag).innerHTML = "&copy;" + year + " " + name + "; " + otherTM;
     }
 }
 
@@ -131,5 +126,9 @@ const media = {
 }
 
 const page = {
-    // Coming Soon
+    setFooter: function(tag, name, otherTM=""){
+        var date = new Date();
+        var year = date.getFullYear();
+        document.getElementById(tag).innerHTML = "&copy;" + year + " " + name + "; " + otherTM;
+    }
 }
