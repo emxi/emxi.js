@@ -113,6 +113,9 @@ const core = {
             console.error("ERROR! ID MUST NOT start with #!");
         }
         setTimeout(core.getTime, 500, tag);
+    },
+    redirect: function(url){
+        window.location.href = url
     }
 }
 
