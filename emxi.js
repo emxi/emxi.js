@@ -147,5 +147,23 @@ const area = {
 const perimeter = {
     square: function(tag, sideLength){
         document.getElementById(tag).innerHTML = sideLength * 4
+    },
+    rect: function(tag, side1, side2){
+        var side12 = side1 * 2
+        var side22 = side2 * 2
+        document.getElementById(tag).innerHTML = side12 + side22
+    },
+    rightTriangle: function(tag, side1, side2){
+        side12 = Math.pow(side1, 2)
+        side22 = Math.pow(side2, 2)
+        document.getElementById(tag).innerHTML = side1 + side2 + Math.sqrt(side22 + side12)
     }
+}
+
+const equation = {
+    // Coming soon
+}
+
+const math = {
+    // Coming soon
 }
