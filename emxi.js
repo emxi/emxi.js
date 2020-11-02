@@ -132,3 +132,17 @@ const page = {
         document.getElementById(tag).innerHTML = "&copy;" + year + " " + name + "; " + otherTM;
     }
 }
+
+
+// Mathematical Functions
+const area = {
+    square: function(sideLength, tag){
+        document.getElementById(tag).innerHTML = sideLength * sideLength
+    }
+}
+
+const perimeter = {
+    square: function(sideLength, tag){
+        document.getElementById(tag).innerHTML = sideLength * 4
+    }
+}
