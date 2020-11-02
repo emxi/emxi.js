@@ -165,5 +165,7 @@ const equation = {
 }
 
 const math = {
-    // Coming soon
+    dice: function(tag, diceType, diceCount){
+        document.getElementById(tag).innerHTML = Math.floor(Math.random() * diceType + 1) * diceCount
+    }
 }
