@@ -141,6 +141,17 @@ const area = {
     },
     rect: function(tag, side1, side2){
         document.getElementById(tag).innerHTML = side1 * side2
+    },
+    rightTriangle: function(tag, side1, side2){
+        var area = side1 * side2
+        area = area / 2
+        document.getElementById(tag).innerHTML = area
+    },
+    circle: function(tag, radius){
+        document.getElementById(tag).innerHTML = 2 * Math.PI * radius
+    },
+    circleByDiameter: function(tag, diameter){
+        document.getElementById(tag).innerHTML = Math.PI * diameter
     }
 }
 
@@ -157,6 +168,13 @@ const perimeter = {
         side12 = Math.pow(side1, 2)
         side22 = Math.pow(side2, 2)
         document.getElementById(tag).innerHTML = side1 + side2 + Math.sqrt(side22 + side12)
+    },
+    circle: function(tag, radius){
+        document.getElementById(tag).innerHTML = Math.PI * Math.pow(radius, 2)
+    },
+    circleByDiameter: function(tag, diameter){
+        var radius = diameter / 2
+        document.getElementById(tag).innerHTML = Math.PI * Math.pow(radius, 2)
     }
 }
 
