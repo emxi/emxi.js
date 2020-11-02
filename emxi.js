@@ -117,10 +117,10 @@ const core = {
 }
 
 const media = {
-    addYouTubeVideo: function (videoURL, tag){
+    addYouTubeVideo: function (tag, videoURL){
         document.getElementById(tag).innerHTML = "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/" + videoURL + "\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
     },
-    addAudio: function(audioURL, tag){
+    addAudio: function(tag, audioURL){
         document.getElementById(tag).innerHTML = "<audio controls><source src=\"" + audioURL + "\" type=\"audio/mpeg\">Your browser does not support the audio element.</audio>";
     }
 }
@@ -136,8 +136,11 @@ const page = {
 
 // Mathematical Functions
 const area = {
-    square: function(sideLength, tag){
+    square: function(tag, sideLength){
         document.getElementById(tag).innerHTML = sideLength * sideLength
+    },
+    rect: function(tag, side1, side2){
+        document.getElementById(tag).innerHTML = side1 * side2
     }
 }
 
