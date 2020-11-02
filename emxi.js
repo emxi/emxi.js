@@ -145,7 +145,7 @@ const area = {
 }
 
 const perimeter = {
-    square: function(sideLength, tag){
+    square: function(tag, sideLength){
         document.getElementById(tag).innerHTML = sideLength * 4
     }
 }
